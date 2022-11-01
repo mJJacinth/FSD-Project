@@ -1,0 +1,43 @@
+.container{
+    background: #ffff;
+    width: 500px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 0rem;
+    margin: 4rem;
+}
+body{
+    justify-content: center;
+    background-size: cover;
+    display:flex;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dLjqRIdFMEBUprOO56LLbtzecxCS7tctEA&usqp=CAU");
+    margin-left: 3rem;
+    font-size: 20px;
+
+}
+.text{
+    padding: 1rem;
+}
+
+.head{
+    text-align: center;
+    color: rgb(185, 11, 159);
+    font-weight: bolder;
+    font-size: 2rem;
+   
+    
+}
+.name{
+    padding-bottom: 15px;
+    padding-left: 50px;
+
+}
+.submit{
+    padding-bottom: 15px;
+    padding-left: 50px;
+    text-align: center;
+}
+.image{
+    width: 30px;
+    max-width:100px;
+}
