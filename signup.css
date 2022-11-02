@@ -41,3 +41,6 @@ body{
     width: 30px;
     max-width:100px;
 }
+#message{
+    font-size: 13px;
+}

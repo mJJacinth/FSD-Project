@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="signup.css">
+
 </head>
 <body>
     <div class="container">
@@ -15,32 +16,39 @@
         <div class="contents">
             <form>
             <div class="name">Your Name:
-                <input type="Text" placeholder="Username" id="text-box" required>
+                <input type="Text" placeholder="Username"  required>
             </div>
             <div class="name">Gender:
                 <input type="radio" id="text-box">
                 <label for="Male">Male</label>
-                <input type="radio" id="text-box">
+                <input type="radio" id="text-box1">
                 <label for="Male">Female</label>
             </div>
             <div class="name">
                 <label for="birthday">Date of Birth:</label>
-                <input type="date" id="birthday" name="birthday" required id="text-box">
+                <input type="date" id="birthday" name="birthday" >
+                <br><span id="AgeMessage"></span>
             </div>
             <div class="name">
-                Email: <input type="email" placeholder="Email" required id="text-box">
+                Email: <input type="email" placeholder="Email"  id="email" required>
+                <br><span id="emailmessage"></span>
             </div>
-            <div class="name">
+            <!-- <div class="name">
                 Contact:<input type="tel" placeholder="enter your number" required id="text-box">
-            </div >
+            </div > -->
+            <div class="name">
+              Contact:<input name="mobile"  id="mobile" type="number" required   ><br><span id="message"></span>
+            </div>
                 <div class="name">
-                    Password:<input type="password" placeholder="At least 6 characters" required id="text-box">
+                    Password:<input type="password" placeholder="At least 6 characters"  id="password"  required>
+                    <br><span id="passwordMessage"></span>
                 </div>
             <div class="name">
-                Re-Enter Password:<input type="password" placeholder="Confirm password" required id="text-box">
+                Re-Enter Password:<input type="password" placeholder="Confirm password"  id="cpassword" required>
+                <br><span id="ConfirmMessage"></span>
             </div>
             <div class="submit">
-                <button type="submit">submit</button>
+                <button type="submit" id="button">submit</button>
             </div>
             <div class="image">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuZZwm7BRvCOR0LGcqxwxRFcmTHgYtK2mOBA&usqp=CAU" alt="signup image">
@@ -49,6 +57,7 @@
         </div>
     </div>
 
+    <script src="signup.js"></script>
   
 </body>
 </html>
