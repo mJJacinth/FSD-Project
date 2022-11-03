@@ -1,0 +1,25 @@
+.cards{
+    /* padding:10px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.head{
+    padding: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgb(123, 28, 206);
+}
+.card-image{
+    width: 200px;
+}
+.carousel-item{
+    padding-right:4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+}
+.label{
+    color: black;
+    font-weight: bold;
+}

@@ -1,6 +1,6 @@
 const password = document.getElementById('password');
 const cpassword = document.getElementById('cpassword');
-var badColor = "red";
+var errorColor = "red";
 var goodcolor = "green";
 const button = document.getElementById('button');
 const pattern=/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -13,8 +13,8 @@ function contactcheck(){
     const message = document.getElementById('message');
     if(mobile.value.length!=10){
        
-        mobile.style.borderColor = badColor;
-        message.style.color = badColor;
+        mobile.style.borderColor = errorColor;
+        message.style.color = errorColor;
         message.innerHTML = "required 10 digits, match requested format!"
     }
     else{
@@ -26,11 +26,11 @@ function contactcheck(){
 function checkpass(){
     // if (password.value ==""){
     //     passwordMessage.innerText="please fill the passward";
-    //     passwordMessage.style.color = badColor;
+    //     passwordMessage.style.color = errorColor;
     // }
     if ((password.value =="")||(cpassword.value=="")){
         ConfirmMessage.innerText="please fill the password";
-        ConfirmMessage.style.color = badColor;
+        ConfirmMessage.style.color = errorColor;
     }
 
 
@@ -38,7 +38,8 @@ function checkpass(){
         console.log("wrong password")
         ConfirmMessage.innerText=" ";
         passwordMessage.innerText="passwords doesn't match";
-        passwordMessage.style.color = badColor;
+        passwordMessage.style.color = errorColor;
+        passwordMessage.style.fontSize="12px";
     }else{
         console.log("right")
         passwordMessage.innerText=" "
@@ -46,10 +47,15 @@ function checkpass(){
 }
 
 function validateEmail(){   
-    if(!pattern.match(email.value)){
-        console.log(email.target.value)
-        emailmessage.innerText="invalid email";
-    }
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  if (email.value.match(validRegex)) {
+
+    return true;
+
+  } else {
+    return false;
+  }
     
 }
 
@@ -64,7 +70,7 @@ function validateEmail(){
 //         AgeMessage.style.color = goodcolor
 //     }
 //     else{
-//         AgeMessage.style.color = badColor
+//         AgeMessage.style.color = errorColor
 
 //     }
 // }
@@ -75,7 +81,8 @@ function validateDate(){
     if((year-userYear)<18){
     console.log('too young')
     AgeMessage.innerText="Age should be greater than 18";
-    AgeMessage.style.color = badColor;
+    AgeMessage.style.color = errorColor;
+    AgeMessage.style.fontSize="12px";
     }
     else {
         console.log('correct')
@@ -91,7 +98,16 @@ button.addEventListener('click',(e)=>{
     contactcheck();
 
     // emailcheck
-    // validateEmail();
+    if(validateEmail()){
+
+    }
+    else{
+        var emailMessage= document.getElementById("emailmessage");
+        emailMessage.innerText="Email address is not valid";
+        emailMessage.style.color=errorColor;
+        emailMessage.style.fontSize="12px";
+
+    }
 
     validateDate();
    
