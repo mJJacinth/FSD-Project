@@ -1,30 +1,70 @@
-let http=new XMLHttpRequest();
-http.open('get', 'men.json',true);
-http.send();
-http.onload=function(){
-    if (this.readyState==4 && this.status==200){
-        let men =JSON. parse(this.responseText);
-        var output="";
-        for(let item of men){
-            output+=`
-            
-             <div class="box" >
-             <div class="imgbox">
-              <img src="${item.img}" alt="Card image cap">
-             </div>
-             <div class="card-body" >
-               <p class="card-text"><strong>Brand : </strong>${item.Brand}</p>
-               <p class="card-text"><strong>price : </strong> ${item.price}</p>
-               <p class="card-text"><strong>Description : </strong> ${item.des}</p>
-               </div>
-               <span><div><button >Add to cart</button></div></span>
-               </div>
-                                 
-      
+const searchfield = document.querySelector('#search');
+ 
+//feteches data from the json file.... and returns a promise using .then to read the promise
+async function fetchdata(){
+    const search = await fetch('./men.json');
+    const data = await search.json();
+    console.log("dd",data)
+    return data;
+}
 
-            `;
-        }
-        document.querySelector(".productcards").innerHTML=output;
+//displaying the contents to the dispaly
+function display(){
+    fetchdata().then(response=>{
+   displayData(response)
+         })
+    }
 
+
+async function filtering(searchvalue){
+    //when the searchfeild is empty we render all the cards from json file
+    if(searchvalue.length === 0){
+        display();
+    }
+};
+
+
+
+
+async function searchBar(searchvalue){
+    //when the searchfeild is empty we render all the cards from json file
+    if(searchvalue.length === 0){
+       display();
+   }
+   const search = await fetch('./men.json');
+   const data = await search.json();
+  let matches = data.filter(matchdata=>{
+       const regx= new RegExp(`${searchvalue}`,'gi');
+       console.log(matchdata.Tag.match(regx),"xxxxxxxxx")
+       return  matchdata.Tag.match(regx);
+   })
+   displayData(matches);
+}
+
+
+   
+function displayData(args){
+    console.log("xxx",args)
+    let card = document.getElementById('product');
+    card.innerHTML=''    
+    for(let i=0; i<args.length; i++){  
+        card.innerHTML+=`
+        <div class="box" >
+               <div class="imgbox">
+                <img src="${args[i].img}" alt="Card image cap">
+               </div>
+               <div class="card-body" >
+                 <p class="card-text"><strong>Brand : </strong>${args[i].Brand}</p>
+                 <p class="card-text"><strong>Price : </strong> ${args[i].price}</p>
+                 <p class="card-text"><strong>Price : </strong> ${args[i].des}</p>
+                 <button  onclick="coursecontent('${args[i].des}')">View details</button>                  
+               </div>
+        </div>`
     }
 }
+
+
+
+searchfield.addEventListener('input',(e)=>{
+    searchBar(searchfield.value);
+});
