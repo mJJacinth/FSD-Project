@@ -21,7 +21,9 @@
     font-weight: bolder;
     font-size: xx-large;
     color: rgb(136, 61, 202);
+    
 }
+
 .card-image{
     width: 200px;
 }
@@ -80,7 +82,7 @@ body {
 
 }
 .productcards .box:hover{
-    border-bottom: 7px solid #05004e;
+    border-bottom: 7px solid rgb(136, 61, 202);
 
 }
 .productcards .box .imgbox{
@@ -104,6 +106,7 @@ body {
 }
 
 .productcards .box .card-body button{
+    text-align: center;
     position:static;
     padding:0.5rem 1rem;
     background: transparent;
@@ -113,17 +116,18 @@ body {
     font-weight: bold;
     background-color: rgb(131, 70, 188);
     color:#eee;
+    font-size: medium;
     /* border-radius: rem; */
     margin-bottom: 2rem;
     margin-left:55px;
-    padding-left: 0px;
+    padding-left: 12px;
 
     /* margin-top: 0.5rem; */
     
 
 }
 .productcards .box .card-body .card-text{
-    font-size: 15px;
+    font-size: 13px;
     margin: 0px;
 }
 

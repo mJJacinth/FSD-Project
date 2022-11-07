@@ -56,15 +56,35 @@ function displayData(args){
                <div class="card-body" >
                  <p class="card-text"><strong>Brand : </strong>${args[i].Brand}</p>
                  <p class="card-text"><strong>Price : </strong> ${args[i].price}</p>
-                 <p class="card-text"><strong>Price : </strong> ${args[i].des}</p>
-                 <button  onclick="coursecontent('${args[i].des}')">View details</button>                  
+                 <p class="card-text"><strong>Description : </strong> ${args[i].des}</p>
+                 <div class="add to cart" onclick="addToCart(${product.id})"><button  style="text-align:center;" onclick="coursecontent('${args[i].des}')">Add cart</button> </div>      
+                            
                </div>
         </div>`
     }
 }
-
+function addToCart(id) {
+    // check if prodcut already exist in cart
+    if (cart.some((item) => item.id === id)) {
+      changeNumberOfUnits("plus", id);
+    } else {
+      const item = products.find((product) => product.id === id);
+  
+      cart.push({
+        ...item,
+        numberOfUnits: 1,
+      });
+    }
+  
+    updateCart();
+  }
+  
+  // update cart
+  
 
 
 searchfield.addEventListener('input',(e)=>{
     searchBar(searchfield.value);
 });
+
+
