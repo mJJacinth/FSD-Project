@@ -1,4 +1,11 @@
 const searchfield = document.querySelector('#search');
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
  
 //feteches data from the json file.... and returns a promise using .then to read the promise
 async function fetchdata(){
@@ -53,38 +60,49 @@ function displayData(args){
                <div class="imgbox">
                 <img src="${args[i].img}" alt="Card image cap">
                </div>
-               <div class="card-body" >
+               <div class="card-body">
                  <p class="card-text"><strong>Brand : </strong>${args[i].Brand}</p>
                  <p class="card-text"><strong>Price : </strong> ${args[i].price}</p>
-                 <p class="card-text"><strong>Description : </strong> ${args[i].des}</p>
-                 <div class="add to cart" onclick="addToCart(${product.id})"><button  style="text-align:center;" onclick="coursecontent('${args[i].des}')">Add cart</button> </div>      
-                            
+                 <p class="card-text"><strong>Price : </strong> ${args[i].des}</p>
+                <span><div><button id= "${args[i].id}" onclick="addproductstocart(this)">Add to cart</button></div></span>
                </div>
         </div>`
     }
 }
-function addToCart(id) {
-    // check if prodcut already exist in cart
-    if (cart.some((item) => item.id === id)) {
-      changeNumberOfUnits("plus", id);
-    } else {
-      const item = products.find((product) => product.id === id);
-  
-      cart.push({
-        ...item,
-        numberOfUnits: 1,
-      });
-    }
-  
-    updateCart();
-  }
-  
-  // update cart
-  
+
 
 
 searchfield.addEventListener('input',(e)=>{
     searchBar(searchfield.value);
 });
+ var count=0;
+ var summ=0
+async function addproductstocart(thz){
+    console.log("id",thz.id);
+    var i_d=thz.id
+    count=count+1
+    let countt = document.getElementById('total-items-in-cart');
+    countt.innerHTML=`<div> ${count}</div>`;
+
+    const search = await fetch('./men.json');
+    const data = await search.json();
+    var data_filter=data.find(element => element.id ==i_d)
+    // console.log(data_filter);
+    // console.log(data_filter.id,data_filter.Brand,data_filter.img,data_filter.price);
+    // return data_filter.id,data_filter.img,data_filter.Brand,data_filter.price
+    summ=summ+data_filter.price
+    var ccard = document.getElementById('cardpp');
+    var items= document.createElement("tr");
+        items.innerHTML+=`
+        
+              <td><img src= "${data_filter.img}" alt="Girl in a jacket" width="100" height="100"></td>
+              <td style="width:60%">${data_filter.Brand}</td>
+              <td style="width:60%">${data_filter.price}</td>`;
+            ccard.appendChild(items);
+    let toatalamount = document.getElementById('subtotal');
+    toatalamount.innerHTML=`
+    <div>Total Amount- ${summ} $</div>`;
+}
+
 
 

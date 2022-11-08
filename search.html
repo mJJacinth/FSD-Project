@@ -28,7 +28,15 @@
             <span><a class="nav-link" href="./search.html" style="color:white">Search</a></span>
             <span><a class="nav-link" href="./Login.html" style="color:white">Login</a></span>
             <span><a class="nav-link" href="./Signup.html" style="color:white">Signup</a></span>
-            <button><ion-icon name="cart"></ion-icon><a href="./cart.html" style="color:rgb(131, 99, 165)">Cart</a></button></div>
+            <div class="shopping-bag" style="color:white">
+              <a href="./cart.html">
+                  <img src="icons/bag.png" alt="cart">
+                  Cart
+                  <div class="total-items-in-cart">
+                      0
+                  </div>
+              </a>
+          </div>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -43,8 +51,8 @@
         <div class="head"> Select your favorites </div> 
     <div class="productcards" id="product"></div>
 
-        <script src="menproducts.js"></script>
-        <script src="men.js"></script>
         <script src="cart.js"></script>
+        <script src="products.js"></script>
+        <!-- <script src="cart.js"></script> -->
 </body>
 </html>
