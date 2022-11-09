@@ -21,9 +21,7 @@
     font-weight: bolder;
     font-size: xx-large;
     color: rgb(136, 61, 202);
-    
 }
-
 .card-image{
     width: 200px;
 }
@@ -82,7 +80,7 @@ body {
 
 }
 .productcards .box:hover{
-    border-bottom: 7px solid rgb(136, 61, 202);
+    border-bottom: 7px solid #05004e;
 
 }
 .productcards .box .imgbox{
@@ -106,7 +104,6 @@ body {
 }
 
 .productcards .box .card-body button{
-    text-align: center;
     position:static;
     padding:0.5rem 1rem;
     background: transparent;
@@ -116,18 +113,17 @@ body {
     font-weight: bold;
     background-color: rgb(131, 70, 188);
     color:#eee;
-    font-size: medium;
     /* border-radius: rem; */
     margin-bottom: 2rem;
     margin-left:55px;
-    padding-left: 12px;
+    padding-left: 0px;
 
     /* margin-top: 0.5rem; */
     
 
 }
 .productcards .box .card-body .card-text{
-    font-size: 13px;
+    font-size: 15px;
     margin: 0px;
 }
 
@@ -136,33 +132,46 @@ body {
     font-size: 13px;
 
 }
-.shopping-bag {
-    padding: 10px 5px;
-    color: black;
-}
-.shopping-bag a {
-display: flex;
-align-items: center;
-}
-.shopping-bag a img {
-width: 30px;
-height: 30px;
-}
-.shopping-bag .total-items-in-cart {
-margin-left: 10px;
-padding: 5px;
-background-color: rgb(242, 255, 58);
-border-radius: 5px;
-}
 
-/* carthtml css */
 
-.gradient-custom {
-    background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
-      linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
-      linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
-      radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
-      radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
-    background-blend-mode: screen, color-dodge, overlay, difference, normal;
-    border-radius: 30px;
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(131, 99, 165);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  
+  }
+  
+  .sidenav a:hover{
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }

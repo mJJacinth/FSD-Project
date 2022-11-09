@@ -1,39 +1,32 @@
-body{
-    
-    justify-content: center;
-    background-size: cover;
-    display:flex;
-    background-color:rgb(220, 197, 243);
-    margin-left: 2rem;
-    margin-right: 2rem;
-    font-size: 20px;
-
-}
-.head{
+.all{
+    background-color: rgb(131, 99, 165);
     text-align: center;
-    color: rgb(19, 18, 18);
-    font-weight: bold;
-    font-size: 1rem;
-   
-    
+    padding: 20px;
+    margin-left:400px;
+    margin-right:400px;
+    height: 200px;
 }
 .submit{
-    padding-top: 50px;
-    text-align: center;
+    margin-top: 30px;
 }
 .container{
     background: #ffff;
-    width: 500px;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
-    border-radius: 0rem;
-    margin: 4rem;
+    width: 350px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+
 }
 .email{
-    padding-left: 2rem;
+    padding: .5rem;
+    font-size: 25px;
 }
 
 .password{
-    padding-left: 2rem;
+    padding-left: .5rem;
+    font-size: 25px;
+}
+.submit{
+    padding-bottom: 1rem;
 }
 

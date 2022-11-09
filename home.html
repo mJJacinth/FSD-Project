@@ -28,8 +28,12 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <form class="flex">
+          <i class="fa fa-search icon"></i>
+          <!-- <ion-icon name="search"></ion-icon> -->
+          <span><input class="form-control me-2" type ="search" placeholder=" search you favorites" id="search" aria-label="search"></span></input>
+          </form>
         <div class="d-flex"><a class="navbar-brand" href="./home.html" style="color:white">FashionFuze</a>
-          <span><a class="nav-link" href="./search.html" style="color:white">Search</a></span>
           <span><a class="nav-link" href="./Login.html" style="color:white">Login</a></span>
           <span><a class="nav-link" href="./Signup.html" style="color:white">Signup</a></span>
           <button>
@@ -48,9 +52,9 @@
     </nav>
     </nav>
    
-    <form class="flex">
+    <!-- <form class="flex">
       <input class="form-control me-2" type ="search" placeholder=" search you favorites" id="search" aria-label="search">
-    </form>
+    </form> -->
 
     
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -135,8 +139,11 @@
             Total : $0
         </div>
         <div class="checkout" class="flex" style="text-align: center;">
-          <a href="checkout.html">Checkout</a>
-        </div>
+            <!-- <button ><a href="./checkout.html">Checkout</button> 
+             -->
+            <button style="text-align:center; background-color:rgb(249, 149, 149);"><a href="./checkout.html" style="text-align:center;">checkout</a></button>
+
+            </div>
     </div>
     </div>
     <div class="productcards" id="product"></div>
@@ -148,3 +155,5 @@
 
         
 </body>
+
+       
