@@ -65,39 +65,41 @@
             <div class="contents">
                 
                     <div class="name" >Your Name:
-                        <input type="Text" placeholder="Username" name="name"  required>
+                        <input type="Text" placeholder="Username" name="name" value="{{ name }}" required>
                     </div>
                     <div class="name">Gender:
-                        <input type="radio" id="text-box" name="gender">
+                        <input type="radio" id="text-box" name="Gender1" value="{{ Gender1 }}">
                         <label for="Male">Male</label>
-                        <input type="radio" id="text-box1" name="gender">
+                        <input type="radio" id="text-box1" name="Gender1"  value="{{ Gender1 }}">
                         <label for="Male">Female</label>
                     </div>
                     <div class="name">
                         <label for="birthday">Date of Birth:</label>
-                        <input type="date" id="birthday" name="birthday" >
+                        <input type="date" id="birthday" name="date" value="{{ date }}">
                         <br><span id="AgeMessage"></span>
                     </div>
                     <div class="name">
-                        Email: <input name="email" type="email" placeholder="Email"  id="email" required>
+                        Email: <input name="email" type="email" placeholder="Email"  id="email"  value="{{ email }}" required>
                         <br><span id="emailmessage"></span>
                     </div>
                     <!-- <div class="name">
                         Contact:<input type="tel" placeholder="enter your number" required id="text-box">
                     </div > -->
                     <div class="name">
-                    Contact:<input name="mobile"  id="mobile" type="number" required   ><br><span id="message"></span>
+                    Contact:<input name="number"  id="mobile" type="number" required   value="{{ number }}"><br><span id="message"></span>
                     </div>
                         <div class="name">
-                            Password:<input name="password" type="password" placeholder="At least 6 characters"  id="password"  required>
+                            Password:<input name="password" type="password" autocomplete="on" placeholder="At least 6 characters"  id="password" value="{{ password }}" required>
                             <br><span id="passwordMessage"></span>
                         </div>
                     <div class="name">
-                        Re-Enter Password:<input name="confirm_password" type="password" placeholder="Confirm password"  id="cpassword" required>
+                        Re-Enter Password:<input name="confirm_password" type="password"  autocomplete ="on" placeholder="Confirm password"  id="cpassword" value="{{ confirm_password }}" required>
                         <br><span id="ConfirmMessage"></span>
                     </div>
+                    
                     <div class="submit">
-                        <button type="submit" id="button" >submit</button>
+                        <input type="submit" id="submit" value="Submit">
+                        <!-- <button type="submit" id="button" >submit</button> -->
                     </div>
                     <div class="image">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuZZwm7BRvCOR0LGcqxwxRFcmTHgYtK2mOBA&usqp=CAU" alt="signup image" width="400" height="300">

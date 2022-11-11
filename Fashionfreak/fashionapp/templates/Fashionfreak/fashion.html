@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <nav class=".justify-content-end">
+      <nav class="navbar navbar-light" style="background-color: rgb(131, 99, 165);">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex"><a class="navbar-brand" href="./home.html" style="color:white">FashionFuze</a>
+          <span><a class="nav-link" href ="{% url 'logout'%}"  style="color:white">Logout</a></span>
+          <span><a href="{% url 'signup'%}" style="color:white">Signup</a></span>
+          <!-- <button>
+            <span  onclick="openNav()" style="color:rgb(131, 99, 165)"><ion-icon name="cart"></ion-icon>Cart</a>
+            <div id="total-items-in-cart">0
+          </button></div> -->
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+    <h1>Hi Iam here</h1>
+    <p>{{name}}</p>
+    
+</body>
+</html>

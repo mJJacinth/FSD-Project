@@ -76,15 +76,16 @@
             {% csrf_token %}
           <div class="all">
             <div class="email">
-                Email <input type="email" placeholder="Email"  id="email" required>
+                Email <input type="email" placeholder="Email"  id="email" name="email" required>
             </div>
             
             <div class="password">
-                Password<input type="password" placeholder="At least 6 characters"  id="password"  required>
+                Password<input type="password" placeholder="At least 6 characters"  id="password" name="password" required>
             </div>
             <div class="submit">
-                <button type="submit" id="button">submit</button>
-            </div>
+              <input type="submit" id="submit" value="Submit">
+              <!-- <button type="submit" id="button" >submit</button> -->
+          </div>
           </div>
         </form>
     
