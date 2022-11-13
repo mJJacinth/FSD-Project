@@ -4,16 +4,199 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+<style>
+    .cards{
+    /* padding:10px; */
+    /* display: flex; */
+    flex-wrap: wrap;
+    margin: 80px;
+    float: left;
+    text-align: center;
+   
+    /* padding-left: 60px; */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.head{
+    padding: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgb(136, 61, 202);
+}
+.card-image{
+    width: 200px;
+}
+.carousel-item{
+    padding-right:4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+}
+.label{
+    color: black;
+    font-weight: bold;
+}
+.women-title{
+    padding-top: 1rem;
+}
+.row{
+    padding-top: 100px;
+}
+.card-body{
+    padding-bottom: 3rem;
+}
+.carousel-item{
+    padding-right:4rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+}
+* {
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    /* background-color: #ffe9e3;   */
+    background-color: white;
+}
+
+.productcards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:6rem;
+    padding:1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;   
+}
+
+.productcards .box{
+      position:relative;
+      height:460px;
+      width: 250px;
+      box-shadow: 0 7px 7px rgba(0,0,0,0.4);
+      overflow: hidden;
+      align-items: center;
+      display: block;
+      justify-content: center;
+      /* border-radius: 0.5rem; */
+
+}
+.productcards .box:hover{
+    border-bottom: 7px solid #05004e;
+
+}
+.productcards .box .imgbox{
+    width:97%;
+    height:63%;
+    
+    /* margin-bottom: 1rem; */
+}
+.productcards .box .imgbox img{
+    padding-left: 3%;
+    height:100%;
+    width:97%;
+}
+.productcards .box .card-body{
+    text-align: left;
+    font-size: 17px;
+    line-height: 2rem;
+    /* font-weight: bold; */
+    margin:0;
+    padding:5px;
+}
+
+.productcards .box .card-body button{
+    position:static;
+    padding:0.5rem 1rem;
+    background: transparent;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(131, 70, 188);
+    color:#eee;
+    /* border-radius: rem; */
+    margin-bottom: 2rem;
+    margin-left:55px;
+    padding-left: 0px;
+
+    /* margin-top: 0.5rem; */
+    
+
+}
+.productcards .box .card-body .card-text{
+    font-size: 15px;
+    margin: 0px;
+}
+
+.button {
+    border-radius: 5px;
+    font-size: 13px;
+
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(131, 99, 165);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  
+  }
+  
+  .sidenav a:hover{
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+</style>
 <body>
+
      <nav class=".justify-content-end">
       <nav class="navbar navbar-light" style="background-color: rgb(131, 99, 165);">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="d-flex"><a class="navbar-brand" href="./home.html" style="color:white">FashionFuze</a>
+        <div><h6> Welcome {{name}}</h46></div>
+        <div class="d-flex"><a class="navbar-brand" href="./fashion.html" style="color:white">FashionFuze</a>
           <span><a class="nav-link" href ="{% url 'logout'%}"  style="color:white">Logout</a></span>
           <span><a href="{% url 'signup'%}" style="color:white">Signup</a></span>
           <!-- <button>
@@ -30,9 +213,108 @@
       </div>
     </div>
     </nav>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://onitaa.co.uk/wp-content/uploads/2020/01/Mens-wear.jpg" class="d-block w-100" alt="..." >
+            <div class="carousel-caption d-none d-md-block">
+              <h5>"Shopping is never a bad idea."</h5>
+              <p>Style is a way to say who you are without having to speak.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.only.com/media/ujodtfzp/on-storefront-w36-01-ie.jpg?format=webp&rsampler=catmull&width=2048&quality=80" class="d-block w-100" alt="..."  >
+            <div class="carousel-caption d-none d-md-block">
+                <div class="label">
+              <h5>Happy Shopping</h5>
+              <p>"The joy of dressing is an art."</p></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://jade-media.jadeblue.com/media/wysiwyg/jadeblue/category/Casual/JB_Web_Casual_2_TopWear_Polo_Tshirts_1920x800.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="label">
+              <h5>Get you favorites</h5></div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="head"> Select your favorites </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-    <h1>Hi Iam here</h1>
-    <p>{{name}}</p>
-    
+      <table>
+        <div id="cardpp" style="padding:5%">
+         
+      </table>
+      <div class="flex" style="text-align: center;">
+        <div id="subtotal" >
+            Total : $0
+        </div>
+        <div class="checkout" class="flex" style="text-align: center;">
+            <!-- <button ><a href="./checkout.html">Checkout</button> 
+             -->
+            <button style="text-align:center; background-color:rgb(249, 149, 149);"><a href="./checkout.html" style="text-align:center;">checkout</a></button>
+
+            </div>
+    </div>
+    </div>
+    <div class="productcards" id="product"></div>
+
+
+<script >
+    async function searchbar(searchvalue){
+    if (searchvalue.length===0){
+      display();
+    }
+    const search =await fetch('./men.json');
+    const data = await search.json();
+    let matches=data.filter(matchdata =>{
+      const regx=new RegExp(`${searchvalue}`,'gi');
+      return matchdata.search.match(regx);
+    })
+    displaydData(matches);
+  }
+  search.addEventListener('input',()=>{
+      searchbar(search.value);
+    });
+   function display(){
+    fetchdata().then (response=>{
+      displayData(response)
+    })
+   }
+   function displayData(args){
+    let card = document.getElementById('product');
+    card.innerHTML=''    
+    for(let i=0; i<args.length; i++){        
+        card.innerHTML+=`
+        <div class="box" >
+               <div class="imgbox">
+                <img src="${item.img}" alt="Card image cap">
+               </div>
+               <div class="card-body" >
+                 <p class="card-text"><strong>Brand : </strong>${item.Brand}</p>
+                 <p class="card-text"><strong>price : </strong> ${item.price}</p>
+                 <p class="card-text"><strong>Description : </strong> ${item.des}</p>
+                 </div>
+                 <span><div><button >Add to cart</button></div></span>
+                 </div>
+                 `;
+    }
+  }
+</script> 
 </body>
 </html>

@@ -16,28 +16,21 @@ def signin(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-        # name1 = Signup.objects.get(email=email,password=password)
-        # user1 = name1.name
-        # print("*"*50)
-        # print(name)
+        name1 = Signup.objects.get(email=email,password=password)
+        user1 = name1.name
         if Signup.objects.filter(email=email).exists():
             if Signup.objects.filter(password=password).exists():
-                # context={
-                #     "email":email,
-                #     "name": name,
-                # }
-                # request.session["name"] = user1
-                return render(request, 'Fashionfreak/fashion.html', {"email":email})
+                request.session["name"] = user1
+                return render(request, 'Fashionfreak/fashion.html', {"email":email,"name":user1})
             else:
                 return HttpResponse("Wrong password")
         else:
             return HttpResponse("Invalid username")
     else:
-        #del request.session['name']
-        # if "name" in request.session:
-        #     context = {
-        #         "name" : request.session["name"]
-        #     }
+        if "name" in request.session:
+            context = {
+                "name" : request.session["name"]
+            }
 
             return render(request, 'Fashionfreak/fashion.html',context)
         else:
@@ -78,10 +71,10 @@ def logged(request):
     return render(request, 'Fashionfreak/logged.html')
 def register(request):
     return render(request, 'Fashionfreak/register.html')
-def logout(request):
+def log_out(request):
     if "name" in request.session:
         del request.session['name']
-    return HttpResponse("you are logged out")
+    return render(request, 'Fashionfreak/login.html')
 
  
    
