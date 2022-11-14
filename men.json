@@ -1,96 +1,96 @@
 [
     {
         "id":"1",
-        "Brand":"Mitara- saree",
-        "price":2500,
+        "Brand":"ALLEN SOLLY",
+        "price":3200,
         "img":"men images/image1.jpg",
-        "des":" banaras saree",
-        "Tag":"saree"
+        "des":"Checks Shirt",
+        "Tag":"shirt"
 
     },
     {
         "id":"2",
-        "Brand":"Vastranand-saree",
-        "price":2500,
+        "Brand":"Louis Phillip",
+        "price":3700,
         "img":"men images/image2.jpg",
-        "des":"stripped design saree",
-        "Tag":"saree"
+        "des":"Plain Shirt",
+        "Tag":"shirt"
     },
     {
         "id":"3",
-        "Brand":"suta-saree",
-        "price":2500,
+        "Brand":"Black Berry",
+        "price":2700,
         "img":"men images/image3.jpg",
-        "des":"green pattu saree",
-        "Tag":"saree"
+        "des":"Stripes Shirt",
+        "Tag":"shirt"
     },
     {
         "id":"4",
-        "Brand":"Mitera-lehanga",
+        "Brand":"H&M",
         "price":2500,
         "img":"men images/image4.jpg",
-        "des":"work lehanga",
-        "Tag":"lehanga"
+        "des":"black sweatshirt",
+        "Tag":"T-shirt"
     },
     {
         "id":"5",
-        "Brand":"Neerus-lehanga",
-        "price":2500,
+        "Brand":"Levis",
+        "price":1200,
         "img":"men images/image5.jpg",
-        "des":" yellow lehanga",
-        "Tag":"lehanga"
+        "des":"Stripes T-shirt",
+        "Tag":"T-shirt"
     },
     {
         "id":"6",
-        "Brand":"Mandyole-lehanga",
-        "price":2500,
+        "Brand":"Indian terrain",
+        "price":700,
         "img":"men images/image6.jpg",
-        "des":"party wear lehanga",
-        "Tag":"lehanga"
+        "des":"Casual T-shirt",
+        "Tag":"T-shirt"
     },
     {
         "id":"7",
-        "Brand":"Beckers bester-dress",
+        "Brand":"Peter England",
         "price":2200,
         "img":"men images/image7.jpg",
-        "des":"Long frock",
-        "Tag":"dress"
+        "des":"Two Piece Suit",
+        "Tag":"Suit"
     },
     {
         "id":"8",
-        "Brand":"Dressberry-dress",
-        "price":2500,
+        "Brand":"Lee Cooper",
+        "price":15000,
         "img":"men images/image8.jpg",
-        "des":"Black&white maxi",
-        "Tag":"dress"
+        "des":"Two Piece Suit",
+        "Tag":"Suit"
     },
     {
         "id":"9",
-        "Brand":"Bostreet-dress",
+        "Brand":"Rare Rabbit",
         "price":2500,
         "img":"men images/image9.jpg",
-        "des":"Fit and flare dress",
-        "Tag":"dress"
+        "des":"Three Piece Suit",
+        "Tag":"Suit"
     },
     {
         "id":"10",
-        "Brand":"Mango-dress",
+        "Brand":"U.S Polo",
         "price":1700,
         "img":"men images/image10.jpg",
-        "des":"mini dress",
-        "Tag":"dress"
+        "des":"Light Blue Jeans",
+        "Tag":"Jeans"
     },
     {
         "id":"11",
-        "Brand":"Roadster-jeans",
+        "Brand":"Levis",
         "price":2500,
         "img":"men images/image11.jpg",
         "des":"Hight waisted jeans",
-        "Tag":"dress"
+        "Tag":"Jeans"
     },
     {
         "id":"12",
-        "Brand":"Mast and Harbour-jeans",
+        "Brand":"U.C.Benetton",
         "price":3000,
         "img":"men images/image12.jpg",
         "des":"Ankle length jeans",
@@ -98,67 +98,67 @@
     },
     {
         "id":"13",
-        "Brand":"Jagjeans-jeans",
+        "Brand":"Puma",
         "price":2000,
         "img":"men images/image13.jpg",
-        "des":"Boy-friend jeans",
-        "Tag":"Jeans"
+        "des":"Formal Pants",
+        "Tag":"Pants"
     },
     {
         "id":"14",
-        "Brand":"Varanga-kurta set",
+        "Brand":"Nike",
         "price":5000,
         "img":"men images/image14.jpg",
-        "des": "mirror work kurta set",
-        "Tag":"Kurta sets"
+        "des": "Formal Pants",
+        "Tag":"Pants"
     },
     {
         "id":"15",
-        "Brand":"Mirraw-kurta set",
+        "Brand":"Park Evenue",
         "price":3200,
         "img":"men images/image15.jpg",
-        "des":" straight kurta set",
-        "Tag":"Kurta sets"
+        "des":"Traditional Wear",
+        "Tag":"Sherwani"
     },
     {
         "id":"16",
-        "Brand":"Kalini-kurta set",
+        "Brand":"Jack and Jones",
         "price":2800,
         "img":"men images/image16.jpg",
-        "des":"cotton kurta set",
-        "Tag":"Kurta sets"
+        "des":"Traditional Wear",
+        "Tag":"Sherwani"
     },
     {
         "id":"17",
-        "Brand":"H&M-top",
+        "Brand":"Manyavaar",
         "price":1300,
         "img":"men images/image17.jpg",
-        "des":"light pink sweatshirt",
-        "Tag":"tops"
+        "des":"Traditional Wear",
+        "Tag":"Sherwani"
     },
     {
         "id":"18",
-        "Brand":"Roadster-top",
+        "Brand":"Tommy Hilifiger",
         "price":700,
         "img":"men images/image18.jpg",
-        "des":"casual shirt",
-        "Tag":"tops"
+        "des":"Traditional Wear",
+        "Tag":"Sherwani"
     },
     {
         "id":"19",
-        "Brand":"Trend Arrest-top",
+        "Brand":"Hrx",
         "price":1500,
         "img":"men images/image19.jpg",
-        "des":"Floral crop top",
-        "Tag":"tops"
+        "des":"Jacket",
+        "Tag":"Sports Wear"
     },
     {
         "id":"20",
-        "Brand":"Fashiole-top",
+        "Brand":"Nike",
         "price":1200,
         "img":"men images/image20.jpg",
-        "des":"Full-sleeve T shirt",
-        "Tag":"tops"
+        "des":"Sports wear ",
+        "Tag":"Sports wear"
     },
 
     {

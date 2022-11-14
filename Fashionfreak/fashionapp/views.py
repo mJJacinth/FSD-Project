@@ -2,6 +2,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from ssl import AlertDescription
 from django.shortcuts import redirect, render
 from . models import Signup
+from .models import product
 # import the standard Django Model6
 # from built-in library
 from django.contrib import auth
@@ -75,6 +76,14 @@ def log_out(request):
     if "name" in request.session:
         del request.session['name']
     return render(request, 'Fashionfreak/login.html')
+
+def prod(request):
+    print("aa", product.objects.all())
+    return render(request, "Fashionfreak/products.html",{
+        "products": product.objects.all()
+    })
+
+
 
  
    
